@@ -1,0 +1,35 @@
+@use "sass:math"
+  
+//RWD
+@mixin rwdmax($max)
+  @media only screen and (max-width: $max + px)  
+    @content
+
+//文字大小像素轉rem
+@mixin font-size($size: 16) 
+  font-size: math.div($size, 16) + rem
+
+@function px($px)
+  @return math.div($px, 16) * 1rem
+
+// absolute-center
+=posCenter
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+
+// 圖片防呆
+=lazyBox($ratio: 0)
+  position: relative
+  &::before
+    content:''
+    display: block
+    width: 100%
+    height: 0
+    padding-bottom: $ratio
+=lazyImg
+  +posCenter
+  width: 100%
+  height: 100%
+  object-fit: cover

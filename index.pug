@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title F2E 2022 by Sean
+    link(rel="stylesheet", href=`./style.css`)
+  body 
+    // 導覽列
+    block navbar
+      include ./layouts/_navbar.pug
+
+    //主選單
+    block menu
+      include ./layouts/_menu.pug
+      
+    // 主要內容
+    block content
+      include ./_main.pug
+
+    // 頁腳
+    block footer
+      include ./layouts/_footer.pug
+
+  script(defer src="./js/static/jquery-3.6.0.min.js")
+  script(defer src="./app.js")
