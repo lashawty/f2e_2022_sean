@@ -6,6 +6,10 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title F2E 2022 by Sean
     link(rel="stylesheet", href=`./style.css`)
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Noto+Serif+TC:wght@500&display=swap' rel='stylesheet')
+
   body 
     // 導覽列
     block navbar
@@ -23,5 +27,7 @@ html(lang="en")
     block footer
       include ./layouts/_footer.pug
 
-  script(defer src="./js/static/jquery-3.6.0.min.js")
+  script(defer src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous")
   script(defer src="./app.js")

@@ -1,2 +1,25 @@
+body {
+  font-family: "Cinzel", "Noto Serif TC", serif;
+}
 
+.lh-12 {
+  line-height: 1.2;
+  letter-spacing: 0.8px;
+}
+
+.fz-160 {
+  font-size: px(160);
+}
+
+.fz-64 {
+  font-size: px(64);
+}
+
+.fz-56 {
+  font-size: px(56);
+}
+
+.fz-32 {
+  font-size: px(32);
+}
 /*# sourceMappingURL=font.css.map */

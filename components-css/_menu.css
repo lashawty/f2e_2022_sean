@@ -1,4 +1,173 @@
+@charset "UTF-8";
+body {
+  font-family: "Cinzel", "Noto Serif TC", serif;
+}
+
+.lh-12 {
+  line-height: 1.2;
+  letter-spacing: 0.8px;
+}
+
+.fz-160 {
+  font-size: max(10rem, 8.3vw);
+}
+
+.fz-64 {
+  font-size: 4rem;
+}
+
+.fz-56 {
+  font-size: 3.5rem;
+}
+
+.fz-32 {
+  font-size: 2rem;
+}
+
+.fz-24 {
+  font-size: 1.5rem;
+}
+
 .menu {
-  color: green;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: #242424;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 320px;
+}
+.loading > p {
+  text-align: center;
+  color: #e3e3e3;
+}
+.loading > span {
+  margin-top: 15px;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 40px;
+  background: #e3e3e3;
+}
+.loading > span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 10px;
+  height: 30px;
+  background: #242424;
+  -webkit-transition: width 1s;
+  transition: width 1s;
+  -webkit-animation: loading 3s ease-in-out;
+          animation: loading 3s ease-in-out;
+}
+@-webkit-keyframes loading {
+  0% {
+    width: calc(100% - 20px);
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes loading {
+  0% {
+    width: calc(100% - 20px);
+  }
+  100% {
+    width: 0;
+  }
+}
+
+.content {
+  margin: 180px auto 0 auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+.menu-title {
+  position: relative;
+  padding-top: 80px;
+}
+.menu-title > p {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  text-align: center;
+  color: #844AE1;
+}
+.menu-title > p::before {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  z-index: -1;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  color: #5ab32b;
+}
+.menu-title > p:first-child {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 125px;
+}
+.menu-title > p:first-child::before {
+  content: "4th";
+  width: 125px;
+}
+.menu-title > p:nth-child(2)::before {
+  content: "THE F2E";
+}
+.menu-title > p:last-child::before {
+  content: "互動式網頁設計";
+}
+
+.menu-option {
+  margin: 100px auto 0 auto;
+  width: 100%;
+  max-width: 200px;
+  color: #e3e3e3;
+}
+.menu-option > p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+.menu-option > p::before {
+  content: "";
+  margin-right: 25px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12.5px 0 12.5px 21.7px;
+  border-color: transparent transparent transparent #e3e3e3;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+}
+.menu-option > p.active::before {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.menu-option > p:not(:first-child) {
+  margin-top: 25px;
 }
 /*# sourceMappingURL=_menu.css.map */
