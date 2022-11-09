@@ -30,12 +30,11 @@ body {
 
 .menu {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: #242424;
 }
-
-.loading {
+.menu .loading {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -44,11 +43,11 @@ body {
   width: 100%;
   max-width: 320px;
 }
-.loading > p {
+.menu .loading > p {
   text-align: center;
   color: #e3e3e3;
 }
-.loading > span {
+.menu .loading > span {
   margin-top: 15px;
   position: relative;
   display: block;
@@ -56,7 +55,7 @@ body {
   height: 40px;
   background: #e3e3e3;
 }
-.loading > span::before {
+.menu .loading > span::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -86,25 +85,33 @@ body {
     width: 0;
   }
 }
-
-.content {
+.menu .content {
   margin: 180px auto 0 auto;
   width: 100%;
   max-width: 800px;
+  -webkit-transform: translateY(-150%);
+          transform: translateY(-150%);
+  -webkit-transition: -webkit-transform 2s ease-in-out;
+  transition: -webkit-transform 2s ease-in-out;
+  transition: transform 2s ease-in-out;
+  transition: transform 2s ease-in-out, -webkit-transform 2s ease-in-out;
 }
-
-.menu-title {
+.menu .content.show {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.menu .menu-title {
   position: relative;
   padding-top: 80px;
 }
-.menu-title > p {
+.menu .menu-title > p {
   position: relative;
   z-index: 1;
   width: 100%;
   text-align: center;
   color: #844AE1;
 }
-.menu-title > p::before {
+.menu .menu-title > p::before {
   position: absolute;
   top: 3px;
   left: 2px;
@@ -114,30 +121,29 @@ body {
   display: inline-block;
   color: #5ab32b;
 }
-.menu-title > p:first-child {
+.menu .menu-title > p:first-child {
   position: absolute;
   right: 0;
   top: 0;
   width: 125px;
 }
-.menu-title > p:first-child::before {
+.menu .menu-title > p:first-child::before {
   content: "4th";
   width: 125px;
 }
-.menu-title > p:nth-child(2)::before {
+.menu .menu-title > p:nth-child(2)::before {
   content: "THE F2E";
 }
-.menu-title > p:last-child::before {
+.menu .menu-title > p:last-child::before {
   content: "互動式網頁設計";
 }
-
-.menu-option {
+.menu .menu-option {
   margin: 100px auto 0 auto;
   width: 100%;
   max-width: 200px;
   color: #e3e3e3;
 }
-.menu-option > p {
+.menu .menu-option > p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,7 +153,7 @@ body {
   cursor: pointer;
   overflow: hidden;
 }
-.menu-option > p::before {
+.menu .menu-option > p::before {
   content: "";
   margin-right: 25px;
   display: inline-block;
@@ -163,11 +169,11 @@ body {
   transition: transform 0.6s;
   transition: transform 0.6s, -webkit-transform 0.6s;
 }
-.menu-option > p.active::before {
+.menu .menu-option > p.active::before {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
-.menu-option > p:not(:first-child) {
+.menu .menu-option > p:not(:first-child) {
   margin-top: 25px;
 }
 /*# sourceMappingURL=_menu.css.map */

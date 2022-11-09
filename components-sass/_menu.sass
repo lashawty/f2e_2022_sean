@@ -4,99 +4,102 @@
   
 .menu
   position: absolute
-  width: 100vw
+  width: 100%
   height: 100vh
   background: $black
-.loading
-  +posCenter
-  width: 100%
-  max-width: 320px
-  >p
-    text-align: center
-    color: $white
-  >span
-    margin-top: 15px
-    position: relative
-    display: block
+  .loading
+    +posCenter
     width: 100%
-    height: 40px
-    background: $white
-    &::before
-      content: ''
-      position: absolute
-      top: 50%
-      transform: translateY(-50%)
-      right: 10px
-      height: 30px
-      background: $black
-      transition: width 1s
-      animation: loading 3s ease-in-out
-      @keyframes loading
-        0%
-          width: calc(100% - 20px)
-        100%
-          width: 0
-.content
-  margin: 180px auto 0 auto
-  width: 100%
-  max-width: 800px
-.menu-title
-  position: relative
-  padding-top: 80px
-  >p
-    position: relative
-    z-index: 1
+    max-width: 320px
+    >p
+      text-align: center
+      color: $white
+    >span
+      margin-top: 15px
+      position: relative
+      display: block
+      width: 100%
+      height: 40px
+      background: $white
+      &::before
+        content: ''
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        right: 10px
+        height: 30px
+        background: $black
+        transition: width 1s
+        animation: loading 3s ease-in-out
+        @keyframes loading
+          0%
+            width: calc(100% - 20px)
+          100%
+            width: 0
+  .content
+    margin: 180px auto 0 auto
     width: 100%
-    text-align: center
-    color: $purple
-    &::before
-      position: absolute
-      top: 3px
-      left: 2px
-      z-index: -1
+    max-width: 800px
+    transform: translateY(-150%)
+    transition: transform 2s ease-in-out
+    &.show
+      transform: translateY(0)
+
+  .menu-title
+    position: relative
+    padding-top: 80px
+    >p
+      position: relative
+      z-index: 1
       width: 100%
       text-align: center
-      display: inline-block
-      color: $green
-    &:first-child
-      position: absolute
-      right: 0
-      top: 0
-      width: 125px
+      color: $purple
       &::before
-        content: '4th'
+        position: absolute
+        top: 3px
+        left: 2px
+        z-index: -1
+        width: 100%
+        text-align: center
+        display: inline-block
+        color: $green
+      &:first-child
+        position: absolute
+        right: 0
+        top: 0
         width: 125px
-    &:nth-child(2)
+        &::before
+          content: '4th'
+          width: 125px
+      &:nth-child(2)
+        &::before
+          content: 'THE F2E'
+      &:last-child
+        &::before
+          content: '互動式網頁設計'
+  .menu-option
+    margin: 100px auto 0 auto
+    width: 100%
+    max-width: 200px
+    color: $white
+    >p
+      display: flex
+      align-items: center
+      cursor: pointer
+      overflow: hidden
       &::before
-        content: 'THE F2E'
-    &:last-child
-      &::before
-        content: '互動式網頁設計'
-.menu-option
-  margin: 100px auto 0 auto
-  width: 100%
-  max-width: 200px
-  color: $white
-  >p
-    display: flex
-    align-items: center
-    cursor: pointer
-    overflow: hidden
-    &::before
-      content: ''
-      margin-right: 25px
-      display: inline-block
-      width: 0
-      height: 0
-      border-style: solid
-      border-width: 12.5px 0 12.5px 21.7px
-      border-color: transparent transparent transparent $white
-      transform: translateX(-100%)
-      transition: transform .6s
-    &.active
-      &::before
-        transform: translateX(0)
-  >p:not(:first-child)
-    margin-top: 25px
-    
- 
+        content: ''
+        margin-right: 25px
+        display: inline-block
+        width: 0
+        height: 0
+        border-style: solid
+        border-width: 12.5px 0 12.5px 21.7px
+        border-color: transparent transparent transparent $white
+        transform: translateX(-100%)
+        transition: transform .6s
+      &.active
+        &::before
+          transform: translateX(0)
+    >p:not(:first-child)
+      margin-top: 25px

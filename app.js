@@ -14,6 +14,7 @@ loading.transition = () => {
     $('.loading').slideUp();
     setTimeout(() => {
       $('.loading').hide();
+      $('.content').addClass('show')
     }, 300);
   }
 }
