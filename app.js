@@ -21,5 +21,5 @@ loading.transition = () => {
 
 $(() => {
   loading.transition();
-  clickSwitchClass($('.menu-option p'), 'active')
+  clickSwitchClass($('.menu-option a'), 'active')
 });
