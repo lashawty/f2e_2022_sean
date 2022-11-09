@@ -1,3 +1,12 @@
+.shadow-block {
+  padding: 15px;
+  border: 4px solid #242424;
+  border-radius: 8px;
+  -webkit-box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.25);
+  background: #e3e3e3;
+}
+
 body {
   font-family: "Cinzel", "Noto Serif TC", serif;
 }
@@ -17,6 +26,10 @@ body {
 
 .fz-56 {
   font-size: max(2.9vw, 1.75rem);
+}
+
+.fz-48 {
+  font-size: 3rem;
 }
 
 .fz-32 {

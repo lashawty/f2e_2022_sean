@@ -5,7 +5,7 @@
 .menu
   position: absolute
   width: 100%
-  height: 100vh
+  height: 1080px
   background: $black
   .loading
     +posCenter
@@ -91,11 +91,7 @@
         content: ''
         margin-right: 25px
         display: inline-block
-        width: 0
-        height: 0
-        border-style: solid
-        border-width: 12.5px 0 12.5px 21.7px
-        border-color: transparent transparent transparent $white
+        +triangle
         transform: translateX(-100%)
         transition: transform .6s
         animation: blink 3s ease-in-out infinite

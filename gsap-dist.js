@@ -1,0 +1,1 @@
+gsap.registerPlugin(ScrollTrigger,TextPlugin);const tl=gsap.timeline({scrollTrigger:{trigger:".view",markers:!0,start:"top 640px",end:"top 540px",scrub:!0}});tl.to(".dialog-1",{left:"0",duration:10}).to(".dialog-2",{right:"0",duration:10});

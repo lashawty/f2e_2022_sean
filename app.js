@@ -6,13 +6,21 @@ function clickSwitchClass(target, className) {
   });
 }
 
+clickSwitchClass.all = () =>{
+  clickSwitchClass($('.menu-option a'), 'active')
+  clickSwitchClass($('.answer li'), 'active')
+}
+
 function clickToggleClass(target, className) {
   $(target).on('click', function () {
     $(this).toggleClass(className);
   });
 }
-//GSAP
-gsap.registerPlugin(ScrollTrigger, TextPlugin)
+
+clickToggleClass.all = () =>{
+  clickToggleClass($('.nav-right'), 'active')
+}
+
 //loading
 const loading = {}
 loading.transition = () => {
@@ -28,6 +36,6 @@ loading.transition = () => {
 
 $(() => {
   loading.transition();
-  clickSwitchClass($('.menu-option a'), 'active')
-  clickToggleClass($('.nav-right'), 'active')
+  clickSwitchClass.all()
+  clickToggleClass.all()
 });
