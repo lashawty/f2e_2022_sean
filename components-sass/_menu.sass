@@ -37,7 +37,7 @@
           100%
             width: 0
   .content
-    margin: 180px auto 0 auto
+    margin: 100px auto 0 auto
     width: 100%
     max-width: 800px
     transform: translateY(-150%)
@@ -98,8 +98,58 @@
         border-color: transparent transparent transparent $white
         transform: translateX(-100%)
         transition: transform .6s
+        animation: blink 3s ease-in-out infinite
+        @keyframes blink
+          0%,50%,100%
+            opacity: 1
+          25%,75%
+            opacity: 0
       &.active
         &::before
           transform: translateX(0)
     >a:not(:first-child)
       margin-top: 25px
+  .mouse
+    margin: 85px auto 0 auto
+    width: 40px
+    cursor: pointer
+    >span
+      display: block
+      position: relative
+      &:first-child
+        width: 100%
+        height: 65px
+        border: 2px solid rgba($white, .6)
+        border-radius: 25px
+        &::before
+          content: ''
+          position: absolute
+          top: 10px
+          left: 50%
+          transform: translateX(-50%)
+          background: rgba($white, .6)
+          width: 2px
+          height: 20px
+      &:last-child
+        margin: 30px auto 0 auto
+        width: 2px
+        height: 40px
+        background: rgba($white, .6)
+        animation: arrow 2s ease-in-out infinite
+        @keyframes arrow
+          0%, 50%, 100%
+            transform: translateY(80%)
+          25%, 75%
+            transform: translateY(0)
+        &::before, &::after
+          content: ''
+          position: absolute
+          bottom: 0
+          left: 0
+          width: 2px
+          height: 15px
+          background: rgba($white, .6)
+          transform: rotate(45deg)
+          transform-origin: bottom
+        &::before
+          transform: rotate(-45deg)

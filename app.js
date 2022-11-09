@@ -6,6 +6,8 @@ function clickSwitchClass(target, className) {
   });
 }
 
+//GSAP
+gsap.registerPlugin(ScrollTrigger, TextPlugin)
 //loading
 const loading = {}
 loading.transition = () => {

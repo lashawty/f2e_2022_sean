@@ -8,15 +8,15 @@ body {
 }
 
 .fz-160 {
-  font-size: max(px(160), 8.3vw);
+  font-size: max(8.3vw, px(80));
 }
 
 .fz-64 {
-  font-size: px(64);
+  font-size: max(3.3vw, px(32));
 }
 
 .fz-56 {
-  font-size: px(56);
+  font-size: max(2.9vw, px(28));
 }
 
 .fz-32 {
