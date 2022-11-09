@@ -1,7 +1,108 @@
 @import ./variable
 @import ./mixin
+@import ./font
 
 nav
-  font-size: px(100)
-  .test
-    color: $black
+  padding: 20px 25px
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 10
+  display: flex
+  justify-content: space-between
+  width: 100vw
+  color: $white
+//左側資訊
+.nav-left
+  display: flex
+  align-items: center
+  >a
+    &:not(:first-child),
+    &:not(:last-child)
+      margin-right: 30px
+  .logo
+    display: flex
+    align-items: center
+    &::after
+      content: ''
+      display: inline-block
+      margin: 0 15px
+      width: 2px
+      height: 65px
+      background: $white
+  +rwdmax(992)
+    >a
+      &:not(:first-child)
+        display: none
+//右側資訊
+.nav-right
+  width: 320px
+  flex-shrink: 0
+  position: relative
+  &.active
+    .logged-in
+      transform: translateY(0%)
+    .un-log
+      transform: translateX(400px)
+  .un-log
+    position: absolute
+    left: 0
+    top: 0
+    display: flex
+    align-items: center
+    width: 100%
+    transition: transform 1s
+    .img-container
+      position: relative
+      max-width: 160px
+      width: 100%
+      cursor: pointer
+      &:hover
+        span
+          letter-spacing: 1px
+      >span
+        position: absolute
+        top: 18px
+        left: 62px
+        z-index: 1
+        font-size: px(14)
+        color: $black
+        transition: letter-spacing 1s
+    .img-box
+      +lazyBox($ratio: 43.75%)
+    img
+      +lazyImg
+  .logged-in 
+    position: absolute
+    left: 0
+    top: 0
+    display: flex
+    align-items: center
+    width: 100%
+    cursor: pointer
+    transform: translateY(-200px)
+    transition: transform 1s
+    &:hover
+      p
+        letter-spacing: 1px
+    .img-container
+      max-width: 70px
+      width: 100%
+      max-height: 70px
+      border-radius: 100%
+      border: 2px solid $white
+      overflow: hidden
+    .img-box
+      +lazyBox($ratio: 100%)
+    img
+      +lazyImg
+    >p
+      margin: 0 15px
+      transition: letter-spacing 1s
+    >span
+      display: inline-block
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 16px 12px 0 12px
+      border-color: $white transparent transparent transparent

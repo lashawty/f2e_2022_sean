@@ -6,6 +6,11 @@ function clickSwitchClass(target, className) {
   });
 }
 
+function clickToggleClass(target, className) {
+  $(target).on('click', function () {
+    $(this).toggleClass(className);
+  });
+}
 //GSAP
 gsap.registerPlugin(ScrollTrigger, TextPlugin)
 //loading
@@ -24,4 +29,5 @@ loading.transition = () => {
 $(() => {
   loading.transition();
   clickSwitchClass($('.menu-option a'), 'active')
+  clickToggleClass($('.nav-right'), 'active')
 });
