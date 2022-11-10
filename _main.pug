@@ -1,31 +1,44 @@
 main
- 
-  //第一個畫面
+
+  //對戰畫面
   .view
+
+    //方格對話框
     .dialog.fz-24.lh-12.dialog-1
       p.shadow-block 羨慕別人的酷酷網頁動畫
       p.shadow-block 滿足不了同事的許願
       p.shadow-block 動畫技能樹太雜無從下手
+    
+    //對戰畫面(小智&怪物)
     .fight
-      .img-container
-        .img-box
-          img(src="./assets/img/ghost-1200x1200.png", alt="alt")
-      .img-container
-        .img-box
-          img(src="./assets/img/ghost-1200x1200.png", alt="alt")
-      .img-container
-        .img-box
-          img(src="./assets/img/ghost-1200x1200.png", alt="alt")
-      .img-container
-        .img-box
-          img(src="./assets/img/chi-1200x1200.png", alt="alt")
-      .img-container
-        .img-box
-          img(src="./assets/img/chi-1200x1200.png", alt="alt")
+      .ghost
+        .img-container
+          .img-box
+            img(src="./assets/img/ghost-1200x1200.png", alt="alt")
+        .img-container
+          .img-box
+            img(src="./assets/img/ghost-1200x1200.png", alt="alt")
+        .img-container
+          .img-box
+            img(src="./assets/img/ghost-1200x1200.png", alt="alt")
+      .chi
+        .img-container
+          .img-box
+            img(src="./assets/img/chi-1200x1200.png", alt="alt")
+        .img-container
+          .img-box
+            img(src="./assets/img/chi-1200x1200.png", alt="alt")
       .dialog.fz-24.lh-12.dialog-2
         p.shadow-block UI DESIGNER
         p.shadow-block FRONT-END DEVELOPER
-    .option-block.lh-12
+    
+    //活動說明
+    .contest-text.lh-12 
+      span.fz-48 活動說明
+      p.fz-24 本活動需由UI設計師和前端工程師合作，採接力完成作品的形式，一週先由UI設計師投稿設計作品，下一週則由前端工程師認領作品，並將其完整產出。<br \><br \>今年三大主題與各路廠商強強聯手，挑戰者們準備好攜手合作打造最強互動式網頁設計了嗎？
+
+    //下方選項
+    .option-block.lh-12.option-block-1
       .question
         p.fz-64 挑戰者
         p.fz-64 要做什麼呢？
@@ -35,3 +48,10 @@ main
           li 耍廢
           li 裝沒看到
           li 逃跑
+    .option-block.lh-12.option-block-2
+      .question
+        p.fz-64 挑戰者
+        p.fz-64 要做什麼呢？
+      .answer
+        ul.fz-48
+          li.active 等不及了

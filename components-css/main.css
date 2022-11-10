@@ -41,12 +41,13 @@ body {
 }
 
 main {
-  padding-top: 1080px;
+  padding-top: 100vh;
   background: #BFBFBF;
 }
 main .view {
-  padding: 120px 0 0 0;
+  height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 main .dialog {
   position: absolute;
@@ -60,14 +61,66 @@ main .dialog {
   width: fit-content;
 }
 main .dialog-1 {
+  top: 30px;
   left: -1000px;
 }
+main .dialog-2 {
+  position: absolute;
+  right: -2000px;
+  bottom: 30px;
+}
+main .contest-text {
+  position: absolute;
+  top: 150px;
+  left: -2000px;
+  max-width: 1280px;
+  width: 100%;
+}
 main .fight {
-  margin: 20px auto 0 auto;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 100%;
   max-width: 1500px;
   height: 600px;
-  position: relative;
+}
+main .fight .ghost, main .fight .chi {
+  position: absolute;
+  width: 100%;
+  height: 320px;
+}
+main .fight .ghost {
+  left: auto;
+  right: 300px;
+  top: 0;
+  max-width: 960px;
+}
+main .fight .ghost .img-container:nth-child(1) {
+  top: 90px;
+  right: 0;
+}
+main .fight .ghost .img-container:nth-child(2) {
+  top: 45px;
+  right: 200px;
+}
+main .fight .ghost .img-container:nth-child(3) {
+  top: 0;
+  right: 400px;
+}
+main .fight .chi {
+  left: 300px;
+  bottom: 0;
+  max-width: 640px;
+}
+main .fight .chi .img-container:nth-child(1) {
+  left: 0;
+  bottom: 0;
+}
+main .fight .chi .img-container:nth-child(2) {
+  left: 200px;
+  bottom: 0;
 }
 main .fight .img-container {
   position: absolute;
@@ -75,26 +128,6 @@ main .fight .img-container {
   width: 100%;
   -webkit-animation: fight 2s ease infinite;
           animation: fight 2s ease infinite;
-}
-main .fight .img-container:nth-child(1) {
-  right: 0;
-  top: 120px;
-}
-main .fight .img-container:nth-child(2) {
-  right: 200px;
-  top: 60px;
-}
-main .fight .img-container:nth-child(3) {
-  right: 400px;
-  top: 0;
-}
-main .fight .img-container:nth-child(4) {
-  left: 0;
-  bottom: 0;
-}
-main .fight .img-container:nth-child(5) {
-  left: 250px;
-  bottom: 0;
 }
 @-webkit-keyframes fight {
   0%, 50%, 100% {
@@ -137,13 +170,11 @@ main .fight .img-container .img-box img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .fight .dialog-2 {
-  position: absolute;
-  right: -2000px;
-  bottom: 30px;
-}
 main .option-block {
   padding: 20px;
+  position: absolute;
+  left: 0;
+  bottom: -500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,6 +182,7 @@ main .option-block {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border: 8px solid #242424;
+  background: #BFBFBF;
   width: 100%;
 }
 main .option-block .question {
