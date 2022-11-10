@@ -2,13 +2,17 @@ main
 
   //對戰畫面
   .view
-
+    .trigger
+    
     //方格對話框
     .dialog.fz-24.lh-12.dialog-1
       p.shadow-block 羨慕別人的酷酷網頁動畫
       p.shadow-block 滿足不了同事的許願
       p.shadow-block 動畫技能樹太雜無從下手
-    
+    .dialog.fz-24.lh-12.dialog-2
+      p.shadow-block UI DESIGNER
+      p.shadow-block FRONT-END DEVELOPER
+      
     //對戰畫面(小智&怪物)
     .fight
       .ghost
@@ -28,9 +32,7 @@ main
         .img-container
           .img-box
             img(src="./assets/img/chi-1200x1200.png", alt="alt")
-      .dialog.fz-24.lh-12.dialog-2
-        p.shadow-block UI DESIGNER
-        p.shadow-block FRONT-END DEVELOPER
+      
     
     //活動說明
     .contest-text.lh-12 
@@ -55,3 +57,18 @@ main
       .answer
         ul.fz-48
           li.active 等不及了
+
+    //板塊
+    .week-img
+      .week-pic.week1
+        .img-box
+          img(src="./assets/img/week-01-1080x640.png", alt="alt")
+      .week-pic.week2
+        .img-box
+          img(src="./assets/img/week-02-1080x640.png", alt="alt")
+      .week-pic.week3
+        .img-box
+          img(src="./assets/img/week-03-1080x640.png", alt="alt")
+
+
+  

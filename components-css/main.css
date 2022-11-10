@@ -45,6 +45,7 @@ main {
   background: #BFBFBF;
 }
 main .view {
+  padding-top: 200px;
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -61,27 +62,27 @@ main .dialog {
   width: fit-content;
 }
 main .dialog-1 {
-  top: 30px;
-  left: -1000px;
+  top: 110px;
+  left: -980px;
 }
 main .dialog-2 {
-  position: absolute;
-  right: -2000px;
-  bottom: 30px;
+  right: -900px;
+  bottom: 300px;
 }
 main .contest-text {
   position: absolute;
   top: 150px;
-  left: -2000px;
+  left: -1280px;
   max-width: 1280px;
   width: 100%;
 }
 main .fight {
+  z-index: 10;
   position: absolute;
-  top: 80px;
+  top: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 100%;
   max-width: 1500px;
   height: 600px;
@@ -94,7 +95,7 @@ main .fight .ghost, main .fight .chi {
 main .fight .ghost {
   left: auto;
   right: 300px;
-  top: 0;
+  top: 100px;
   max-width: 960px;
 }
 main .fight .ghost .img-container:nth-child(1) {
@@ -110,8 +111,8 @@ main .fight .ghost .img-container:nth-child(3) {
   right: 400px;
 }
 main .fight .chi {
-  left: 300px;
-  bottom: 0;
+  left: 400px;
+  bottom: 100px;
   max-width: 640px;
 }
 main .fight .chi .img-container:nth-child(1) {
@@ -173,8 +174,8 @@ main .fight .img-container .img-box img {
 main .option-block {
   padding: 20px;
   position: absolute;
-  left: 0;
-  bottom: -500px;
+  left: -100%;
+  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -259,5 +260,64 @@ main .option-block .answer > ul > li::before {
 main .option-block .answer > ul > li.active::before {
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+main .option-block-2 ul {
+  margin: 30px 0 0 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .week-img {
+  position: absolute;
+  top: -600px;
+  right: -800px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 800px;
+  height: 600px;
+}
+main .week-pic {
+  position: absolute;
+  max-width: 640px;
+  width: 100%;
+}
+main .week-pic .img-box {
+  position: relative;
+}
+main .week-pic .img-box::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 59.25%;
+}
+main .week-pic .img-box img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .week3 {
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+main .week2 {
+  right: 60px;
+  top: 80px;
+  z-index: 2;
+}
+main .week1 {
+  z-index: 3;
+  right: 120px;
+  top: 160px;
 }
 /*# sourceMappingURL=main.css.map */
