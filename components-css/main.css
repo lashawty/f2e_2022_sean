@@ -86,6 +86,7 @@ main .fight {
   width: 100%;
   max-width: 1500px;
   height: 600px;
+  pointer-events: none;
 }
 main .fight .ghost, main .fight .chi {
   position: absolute;
@@ -176,6 +177,7 @@ main .option-block {
   position: absolute;
   left: -100%;
   bottom: 0;
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,12 +188,22 @@ main .option-block {
   background: #BFBFBF;
   width: 100%;
 }
-main .option-block .question {
+main .option-block .question, main .option-block .map {
   padding: 25px;
+  position: relative;
   color: #e3e3e3;
   background: #606060;
   border: 8px solid #242424;
   width: calc(50% - 12.5px);
+}
+main .option-block .question > p, main .option-block .map > p {
+  height: 73px;
+}
+main .option-block .question > span, main .option-block .map > span {
+  position: absolute;
+  left: 350px;
+  bottom: 23px;
+  opacity: 0;
 }
 main .option-block .answer {
   padding: 25px;
@@ -261,14 +273,145 @@ main .option-block .answer > ul > li.active::before {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
-main .option-block-2 ul {
-  margin: 30px 0 0 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+main .option-block .answer > ul .cant-wait {
+  display: none;
+}
+main .option-block .answer > ul .cant-wait.show {
+  display: block !important;
+}
+main .option-block-2 {
+  display: block;
+}
+main .option-block-2 .question {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+main .option-block-2 .question > p {
+  height: 50px;
+}
+main .option-block-2 .list {
+  padding: 10px;
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  border: 4px solid #242424;
+  border-bottom: none;
+  background: #e3e3e3;
+}
+main .option-block-2 .list > li.active {
+  color: #844AE1;
+}
+main .option-block-2 .map {
+  padding: 20px 100px;
+  position: relative;
+  width: 100%;
+}
+main .option-block-2 .map-img {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1220px;
+  width: 100%;
+  z-index: 3;
+}
+main .option-block-2 .map-img > p {
+  position: absolute;
+  z-index: 1;
+}
+main .option-block-2 .map-img > p:first-child {
+  top: 245px;
+  left: 80%;
+}
+main .option-block-2 .map-img > p:nth-child(2) {
+  top: 500px;
+  left: 60%;
+}
+main .option-block-2 .map-img > p:nth-child(3) {
+  top: 200px;
+  left: 40%;
+}
+main .option-block-2 .map-img > p:nth-child(4) {
+  top: 440px;
+  left: 25%;
+}
+main .option-block-2 .map-img > p:nth-child(5) {
+  top: 530px;
+  left: 15%;
+}
+main .option-block-2 .map-img .img-box {
+  position: relative;
+}
+main .option-block-2 .map-img .img-box::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+}
+main .option-block-2 .map-img .img-box img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .option-block-2 .box-img {
+  position: absolute;
+  z-index: 4;
+  top: 105px;
+  left: 67%;
+  max-width: 140px;
+  width: 100%;
+  cursor: pointer;
+}
+main .option-block-2 .box-img > p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 4;
+  background: #242424;
+}
+main .option-block-2 .box-img .img-box {
+  position: relative;
+}
+main .option-block-2 .box-img .img-box::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+}
+main .option-block-2 .box-img .img-box img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .week-img {
   position: absolute;

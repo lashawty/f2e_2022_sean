@@ -42,22 +42,44 @@ main
     //下方選項
     .option-block.lh-12.option-block-1
       .question
-        p.fz-64 挑戰者
-        p.fz-64 要做什麼呢？
+        //挑戰者
+        p.challenger.fz-64
+        //要做什麼呢？
+        p.do-what.fz-64
+        span.fz-64.q-mark ？
+        //_
+        
       .answer
         ul.fz-48
           li.active 攜手合作
           li 耍廢
           li 裝沒看到
           li 逃跑
-    .option-block.lh-12.option-block-2
+          li.cant-wait 等不及了
+    .option-block.option-block-2
+      ul.list.lh-12.fz-24
+        li.active 比賽流程
+        li 開放報名
+        li 組別開賽
+        li 組別開賽
+        li 組別開賽
       .question
-        p.fz-64 挑戰者
-        p.fz-64 要做什麼呢？
-      .answer
-        ul.fz-48
-          li.active 等不及了
-
+        //每個挑戰主題提供一週開發時間，未在隔週一中午12:00前登陸作品者，當週即為挑戰失敗！
+        p.fz-24.fail.lh-12 
+      .map
+        .map-img
+          p.fz-24.lh-12 開放報名
+          p.fz-24.lh-12 WEEK 1
+          p.fz-24.lh-12 WEEK 2
+          p.fz-24.lh-12 WEEK 3
+          p.fz-24.lh-12 頒獎
+          .img-box
+            img(src="./assets/img/map-1200x600.png", alt="alt")
+        .box-img
+          p.fz-24 CLICK
+          .img-box
+            img(src="./assets/img/box-140x140.png", alt="alt")
+        
     //板塊
     .week-img
       .week-pic.week1

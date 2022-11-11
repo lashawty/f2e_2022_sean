@@ -12,8 +12,24 @@ nav
   display: flex
   justify-content: space-between
   width: 100vw
-  color: $white
-
+  color: $black
+  transition: color .4s
+  &.white
+    color: $white
+    .nav-left
+      .logo
+        &::after
+          background: $white
+    .nav-right
+      .un-log
+        .img-container
+          >span
+            color: $white
+      .logged-in
+        .img-container
+          border: 2px solid $white
+        >span
+          border-color: $white transparent transparent transparent
 //左側資訊
 .nav-left
   display: flex
@@ -31,7 +47,8 @@ nav
       margin: 0 15px
       width: 2px
       height: 65px
-      background: $white
+      background: $black
+      transition: background .4s
   +rwdmax(992)
     >a
       &:not(:first-child)
@@ -70,7 +87,7 @@ nav
         z-index: 1
         font-size: px(14)
         color: $black
-        transition: letter-spacing 1s
+        transition: letter-spacing 1s color .4s
     .img-box
       +lazyBox($ratio: 43.75%)
     img
@@ -93,7 +110,8 @@ nav
       width: 100%
       max-height: 70px
       border-radius: 100%
-      border: 2px solid $white
+      border: 2px solid $black
+      transition: border .4s
       overflow: hidden
     .img-box
       +lazyBox($ratio: 100%)
@@ -108,4 +126,5 @@ nav
       height: 0
       border-style: solid
       border-width: 16px 12px 0 12px
-      border-color: $white transparent transparent transparent
+      border-color: $black transparent transparent transparent
+      transition: border-color .4s

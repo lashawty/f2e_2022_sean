@@ -34,8 +34,24 @@ loading.transition = () => {
   }
 }
 
+function navColor(){
+  const $menu = document.querySelector('.menu')
+  const $nav = $('nav')
+  const menuHeight = $menu.offsetHeight
+  $(window).scroll(function () {
+    var scrollVal = $(this).scrollTop();
+    if (scrollVal < menuHeight) {
+      $nav.addClass('white')
+    } else {
+      $nav.removeClass('white')
+    }
+  });
+}
+
+
 $(() => {
   loading.transition();
   clickSwitchClass.all()
   clickToggleClass.all()
+  navColor()
 });
