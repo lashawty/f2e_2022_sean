@@ -1,5 +1,5 @@
 # F2E 2022 Sean Week1
-[cover](./assets/img/cover.png)
+(./assets/img/cover.png)
 
 [網站連結](https://lashawty.github.io/f2e_2022_sean/)
 
