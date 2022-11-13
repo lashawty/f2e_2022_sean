@@ -1,7 +1,7 @@
 main
 
   //對戰畫面
-  .view
+  section.view#view-1
     .trigger
     
     //方格對話框
@@ -12,7 +12,7 @@ main
     .dialog.fz-24.lh-12.dialog-2
       p.shadow-block UI DESIGNER
       p.shadow-block FRONT-END DEVELOPER
-      
+    
     //對戰畫面(小智&怪物)
     .fight
       .ghost
@@ -33,7 +33,6 @@ main
           .img-box
             img(src="./assets/img/chi-1200x1200.png", alt="alt")
       
-    
     //活動說明
     .contest-text.lh-12 
       span.fz-48 活動說明
@@ -56,13 +55,14 @@ main
           li 裝沒看到
           li 逃跑
           li.cant-wait 等不及了
+    
     .option-block.option-block-2
       ul.list.lh-12.fz-24
         li.active 比賽流程
         li 開放報名
-        li 組別開賽
-        li 組別開賽
-        li 組別開賽
+        li Week 1
+        li Week 2
+        li Week 3
       .question
         //每個挑戰主題提供一週開發時間，未在隔週一中午12:00前登陸作品者，當週即為挑戰失敗！
         p.fz-24.fail.lh-12 
@@ -92,5 +92,25 @@ main
         .img-box
           img(src="./assets/img/week-03-1080x640.png", alt="alt")
 
-
-  
+  //區區修煉已經無法滿足了嗎？
+  section.view.view-2
+    //區區修煉已經無法滿足了嗎？還有比賽等著你！
+    p.title-2.fz-56.lh-12 
+    .block.lh-12.shadow-block
+      ul.fz-32 獎項
+        li.fz-24 初選佳作 共六十位 數位獎狀 （每週主題個人組十位、團體組十位）
+        li.fz-24 個人企業獎 共六位 NTD 3,000/位 （每週主題各兩位，設計一位、前端一位）
+        li.fz-24 團體企業獎 共三組 NTD 10,000/組 （每週主題各一組）
+        p.fz-24 以上皆提供完賽數位獎狀
+      ul.fz-32 評審機制
+        ol.fz-24 初選：將由六角學院前端、UI，評審進行第一篩選。
+        ol.fz-24 決選：由六角學院與贊助廠商討論，進行最後篩選，並於 12/30 (五) 由評審進行直播公佈名單！
+    .gold
+      .img-box 
+        img(src="./assets/img/gold-1440x305.png", alt="alt")
+    .gold.gold-2
+      .img-box 
+        img(src="./assets/img/gold-1440x305.png", alt="alt")
+    .gold.gold-3
+      .img-box 
+        img(src="./assets/img/gold-1440x305.png", alt="alt")

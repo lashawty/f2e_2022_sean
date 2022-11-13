@@ -1,15 +1,11 @@
 @charset "UTF-8";
-.shadow-block {
-  padding: 15px;
-  border: 4px solid #242424;
-  border-radius: 8px;
-  -webkit-box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.25);
-  background: #e3e3e3;
-}
-
 body {
   font-family: "Cinzel", "Noto Serif TC", serif;
+}
+
+h1 {
+  opacity: 0;
+  position: absolute;
 }
 
 .lh-12 {
@@ -104,14 +100,6 @@ body {
   max-width: 800px;
   -webkit-transform: translateY(-150%);
           transform: translateY(-150%);
-  -webkit-transition: -webkit-transform 2s ease-in-out;
-  transition: -webkit-transform 2s ease-in-out;
-  transition: transform 2s ease-in-out;
-  transition: transform 2s ease-in-out, -webkit-transform 2s ease-in-out;
-}
-.menu .content.show {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
 }
 .menu .menu-title {
   position: relative;
@@ -243,8 +231,8 @@ body {
 }
 @-webkit-keyframes arrow {
   0%, 50%, 100% {
-    -webkit-transform: translateY(80%);
-            transform: translateY(80%);
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
   }
   25%, 75% {
     -webkit-transform: translateY(0);
@@ -253,8 +241,8 @@ body {
 }
 @keyframes arrow {
   0%, 50%, 100% {
-    -webkit-transform: translateY(80%);
-            transform: translateY(80%);
+    -webkit-transform: translateY(30%);
+            transform: translateY(30%);
   }
   25%, 75% {
     -webkit-transform: translateY(0);

@@ -10,9 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&amp;family=Noto+Serif+TC:wght@500&amp;display=swap" rel="stylesheet">
   </head>
-  <body> 
+  <body>
+    <!--h1-->
+    <h1>F2E 2022 by Sean</h1>
     <!-- 導覽列-->
-    <nav>
+    <nav class="white">
       <!--導覽列左側-->
       <div class="nav-left"><a class="fz-56 logo" href="index.html">THE F2E</a><a class="fz-24" href="javascript:;">關卡資訊</a><a class="fz-24" href="javascript:;">求職專區</a><a class="fz-24" href="javascript:;">Q&A</a></div>
       <!--導覽列右側(可點擊)-->
@@ -34,7 +36,7 @@
       </div>
     </nav>
     <!--主選單-->
-    <div class="menu">
+    <section class="menu">
       <div class="loading">
         <p class="fz-32">LOADING</p><span></span>
       </div>
@@ -47,11 +49,11 @@
         <div class="menu-option"><a class="fz-24 active" href="javascript:;">六角學院</a><a class="fz-24" href="javascript:;">UI DESIGN</a><a class="fz-24" href="javascript:;">FRONTEND</a></div>
         <div class="mouse"><span> </span><span></span></div>
       </div>
-    </div>
+    </section>
     <!-- 主要內容-->
     <main>
       <!--對戰畫面-->
-      <div class="view">
+      <section class="view" id="view-1">
         <div class="trigger"></div>
         <!--方格對話框-->
         <div class="dialog fz-24 lh-12 dialog-1">
@@ -112,9 +114,9 @@
           <ul class="list lh-12 fz-24">
             <li class="active">比賽流程</li>
             <li>開放報名</li>
-            <li>組別開賽</li>
-            <li>組別開賽</li>
-            <li>組別開賽</li>
+            <li>Week 1</li>
+            <li>Week 2</li>
+            <li>Week 3</li>
           </ul>
           <div class="question">
             <!--每個挑戰主題提供一週開發時間，未在隔週一中午12:00前登陸作品者，當週即為挑戰失敗！-->
@@ -147,14 +149,81 @@
             <div class="img-box"><img src="./assets/img/week-03-1080x640.png" alt="alt"></div>
           </div>
         </div>
-      </div>
+      </section>
+      <!--區區修煉已經無法滿足了嗎？-->
+      <section class="view view-2">
+        <!--區區修煉已經無法滿足了嗎？還有比賽等著你！-->
+        <p class="title-2 fz-56 lh-12"> </p>
+        <div class="block lh-12 shadow-block">
+          <ul class="fz-32">獎項
+            <li class="fz-24">初選佳作 共六十位 數位獎狀 （每週主題個人組十位、團體組十位）</li>
+            <li class="fz-24">個人企業獎 共六位 NTD 3,000/位 （每週主題各兩位，設計一位、前端一位）</li>
+            <li class="fz-24">團體企業獎 共三組 NTD 10,000/組 （每週主題各一組）</li>
+            <p class="fz-24">以上皆提供完賽數位獎狀</p>
+          </ul>
+          <ul class="fz-32">評審機制
+            <ol class="fz-24">初選：將由六角學院前端、UI，評審進行第一篩選。</ol>
+            <ol class="fz-24">決選：由六角學院與贊助廠商討論，進行最後篩選，並於 12/30 (五) 由評審進行直播公佈名單！</ol>
+          </ul>
+        </div>
+        <div class="gold">
+          <div class="img-box"> <img src="./assets/img/gold-1440x305.png" alt="alt"></div>
+        </div>
+        <div class="gold gold-2">
+          <div class="img-box"> <img src="./assets/img/gold-1440x305.png" alt="alt"></div>
+        </div>
+        <div class="gold gold-3">
+          <div class="img-box"> <img src="./assets/img/gold-1440x305.png" alt="alt"></div>
+        </div>
+      </section>
     </main>
     <!-- 頁腳-->
+    <footer>
+      <div class="view footer-view">
+        <!--動畫尚未進場-->
+        <div class="photo-block">
+          <div class="god-img">
+            <div class="img-box"><img src="./assets/img/god-01-400x400.jpg" alt=""></div>
+          </div>
+          <div class="god-img">
+            <div class="img-box"><img src="./assets/img/god-02-400x400.jpg" alt=""></div>
+          </div>
+          <div class="god-img">
+            <div class="img-box"><img src="./assets/img/god-03-400x400.jpg" alt=""></div>
+          </div>
+          <div class="god-img">
+            <div class="img-box"><img src="./assets/img/god-04-400x400.jpg" alt=""></div>
+          </div>
+        </div>
+        <div class="option-block option-block-3 lh-12 fz-48">
+          <div class="share">
+            <p>各界大神接力分享</p>
+            <p>11/3~11/24 每週四線上直播</p>
+            <p>免費公開場</p>
+          </div>
+          <div class="wrap left-wrap shadow-block">
+            <p>挑戰者數量：1199</p>
+          </div>
+          <div class="wrap right-wrap shadow-block"><span>個人組：1093</span><span>團體組：41</span></div>
+        </div>
+        <!--動畫進場-->
+        <div class="sponsor-block">
+          <div class="title fz-48 lh-12"><span>鑽石級</span><span>贊助商</span></div>
+          <div class="sponsor"><a class="shadow-block sponsor-img" href="javascript:;">
+              <div class="img-box"><img src="./assets/img/sponsor-03-120x120.jpg" alt=""></div></a><a class="shadow-block sponsor-img" href="javascript:;">
+              <div class="img-box"><img src="./assets/img/sponsor-02-120x120.jpg" alt=""></div></a><a class="shadow-block sponsor-img" href="javascript:;">
+              <div class="img-box"><img src="./assets/img/sponsor-01-120x120.jpg" alt=""></div></a></div><a class="job-apply shadow-block" href="javascript:;"><span></span>
+            <p class="fz-24 lh-12">求職專區</p></a>
+        </div>
+      </div>
+    </footer>
   </body>
   <script defer src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Observer.min.js"></script>
   <script defer src="./gsap.js"></script>
   <script defer src="./app.js"></script>
 </html>

@@ -1,2 +1,113 @@
+@import ./variable
+@import ./mixin
+@import ./font
+
+//頁腳 
 footer
-  color: blue
+  .view
+    padding-top: 105px
+    background: $gray
+  .photo-block
+    position: relative
+    z-index: 2
+    margin: 20px auto 0 auto
+    display: flex
+    flex-wrap: wrap
+    max-width: 400px
+    width: 100%
+  .god-img
+    position: relative
+    max-width: 200px
+    width: 100%
+    filter: blur(10px)
+    overflow: hidden
+    transition: filter .6s
+    &:hover
+      filter: blur(0)
+      img
+        transform: translate(-50%, -50%) scale(1.2)
+    .img-box
+      +lazyBox($ratio: 100%)
+    img
+      +lazyImg
+      transition: transform .6s
+  .option-block
+    left: 0
+    background: $white
+  .wrap
+    position: absolute
+    top: 15px
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 20px
+    width: 49%
+    height: calc(100% - 30px)
+    &:nth-child(2)
+      left: 10px
+      background: $dark-gray
+      opacity: 0
+      color: $white
+    &:last-child
+      opacity: 0
+      right: 10px
+  .share
+    >p
+      text-align: center
+      color: $black
+      &:first-child
+        color: $dark-gray
+      &:not(:first-child)
+        margin-top: 5px
+  .sponsor-block
+    margin-top: 50px
+    position: absolute
+    z-index: 1
+    top: 150px
+    left: 0
+    opacity: 0
+    width: 100%
+    .title
+      margin: 0 auto
+      width: 300px
+      >span
+        color: $purple
+        &:last-child
+          color: $black
+  .sponsor
+    margin: 50px auto 0 auto 
+    display: flex
+    justify-content: space-between
+    max-width: 560px
+    width: 100%
+  .sponsor-img
+    padding: 0
+    position: relative
+    max-width: 120px
+    width: 100%
+    &::after
+      content: '凱鈿科技'
+      position: absolute
+      bottom: -50px
+      display: block
+      width: 100%
+      font-size: px(24)
+      color: $black
+      text-align: center
+    &:nth-child(2)
+      &::after
+        content: '板塊設計'
+    &:last-child
+      &::after
+        content: '鈦坦科技'
+    .img-box
+      +lazyBox($ratio: 100%)
+    img
+      +lazyImg
+  .job-apply
+    margin: 100px auto 0 auto
+    display: block
+    background: $white
+    max-width: 200px
+    width: 100%
+    text-align: center

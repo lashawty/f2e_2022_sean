@@ -8,14 +8,26 @@ nav
   position: fixed
   top: 0
   left: 0
-  z-index: 10
+  z-index: 99
   display: flex
   justify-content: space-between
+  border: 2px solid $black
   width: 100vw
   color: $black
-  transition: color .4s
+  transform: translateY(-50%)
+  opacity: 0
+  transition: all .4s
+  &:hover
+    opacity: 1
+    transform: translateY(0)
+    background: $gray
   &.white
+    border: none
+    opacity: 1
     color: $white
+    transform: translateY(0)
+    &:hover
+      background: none
     .nav-left
       .logo
         &::after
@@ -30,6 +42,8 @@ nav
           border: 2px solid $white
         >span
           border-color: $white transparent transparent transparent
+  
+  
 //左側資訊
 .nav-left
   display: flex

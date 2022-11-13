@@ -21,26 +21,40 @@ clickToggleClass.all = () =>{
   clickToggleClass($('.nav-right'), 'active')
 }
 
+
 //loading
 const loading = {}
 loading.transition = () => {
   const loading = $('.loading')
   loading[0].onanimationend = (loading) => {
-    $('.loading').slideUp();
-    setTimeout(() => {
-      $('.loading').hide();
-      $('.content').addClass('show')
-    }, 300);
+    const timelineMenu = gsap.timeline()
+    timelineMenu.to('.loading', {opacity: 0, duration:1})
+    timelineMenu.to('.content', {yPercent: 150, duration:1})
   }
 }
 
-function navColor(){
+loading.mouse = () => {
+  const menuHeight = $('.menu')[0].offsetHeight
+  $('.mouse').on('click', function () {
+    gsap.to(window, {duration: 2, scrollTo: menuHeight});
+  });
+}
+
+loading.all = () => {
+  loading.transition()
+  loading.mouse()
+}
+
+//nav
+const nav = {}
+const $nav = $('nav')
+
+nav.color = function(){
   const $menu = document.querySelector('.menu')
-  const $nav = $('nav')
   const menuHeight = $menu.offsetHeight
   $(window).scroll(function () {
     var scrollVal = $(this).scrollTop();
-    if (scrollVal < menuHeight) {
+    if (scrollVal < (menuHeight - 105)) {
       $nav.addClass('white')
     } else {
       $nav.removeClass('white')
@@ -49,9 +63,18 @@ function navColor(){
 }
 
 
+nav.all = () => {
+  nav.color()
+}
+
+
+//init
 $(() => {
-  loading.transition();
+  //common
   clickSwitchClass.all()
   clickToggleClass.all()
-  navColor()
+
+  //others
+  loading.all()
+  nav.all()
 });

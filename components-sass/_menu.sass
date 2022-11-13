@@ -46,9 +46,6 @@
     width: 100%
     max-width: 800px
     transform: translateY(-150%)
-    transition: transform 2s ease-in-out
-    &.show
-      transform: translateY(0)
 
   //大標題
   .menu-title
@@ -144,7 +141,7 @@
         animation: arrow 2s ease-in-out infinite
         @keyframes arrow
           0%, 50%, 100%
-            transform: translateY(80%)
+            transform: translateY(30%)
           25%, 75%
             transform: translateY(0)
         &::before, &::after
