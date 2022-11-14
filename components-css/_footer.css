@@ -138,26 +138,22 @@ footer .share > p:first-child {
 footer .share > p:not(:first-child) {
   margin-top: 5px;
 }
-footer .sponsor-block {
+footer .sponsor {
   margin-top: 50px;
-  position: absolute;
-  z-index: 1;
-  top: 150px;
-  left: 0;
   opacity: 0;
   width: 100%;
 }
-footer .sponsor-block .title {
+footer .sponsor .title {
   margin: 0 auto;
   width: 300px;
 }
-footer .sponsor-block .title > span {
+footer .sponsor .title > span {
   color: #844AE1;
 }
-footer .sponsor-block .title > span:last-child {
+footer .sponsor .title > span:last-child {
   color: #242424;
 }
-footer .sponsor {
+footer .sponsor-photo {
   margin: 50px auto 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;

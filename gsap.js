@@ -187,16 +187,16 @@ Observer.create({
   target: 'footer',
   type: "wheel,touch,scroll",
   
-  onDown: () =>
+  onUp: () =>
   gsap.timeline().to('.photo-block', {opacity: 1, yPercent:0,duration:1})
-  .to('.sponsor-block', {opacity: 0, duration:1}, "<")
+  .to('.sponsor', {opacity: 0, yPercent: 100, duration:1, }, "<")
   .to('.left-wrap', {xPercent: -110, duration:1}, "<")
   .to('.right-wrap', {xPercent: 110, duration:1}, "<")
   .to('.share', {yPercent: 0, opacity: 1,duration:1}, "<"),
   
 
-  onUp: () => 
-  gsap.timeline().to('.sponsor-block', {opacity: 1, duration:1})
+  onDown: () => 
+  gsap.timeline().to('.sponsor', {opacity: 1, yPercent: -100,duration:1})
   .to('.photo-block', {opacity: 0, yPercent:-100, duration:1}, "<")
   .to('.left-wrap', {xPercent: 0, opacity: 1,duration:1}, "<")
   .to('.right-wrap', {xPercent: 0, opacity: 1,duration:1}, "<")
